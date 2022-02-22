@@ -13,11 +13,8 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <p class="notice"><%= notice %></p>
-    <% else %>
-      <p class="alert"><%= alert %></p>
-    <% end %>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
     <%= yield %>
   </body>
 </html>
