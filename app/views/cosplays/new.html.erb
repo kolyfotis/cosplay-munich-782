@@ -1,0 +1,7 @@
+<h1>Create your coslplay listing</h1>
+
+<%= simple_form_for(@cosplay) do |f| %>
+    <%= f.input :price, as: :string  %>
+    <%= f.input :details %>
+    <%= f.button :submit %>
+  <% end %>
