@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>CosplayMunich782</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,8 +12,12 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
   <body>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
     <%= yield %>
   </body>
+  <footer>
+    <%= render 'shared/footer' %>
+  </footer>
 </html>
