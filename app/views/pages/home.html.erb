@@ -1,7 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<% if user_signed_in? %>
-  <p>First Name: <%= current_user.first_name %></p>
-  <p>Last Name: <%= current_user.last_name %></p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url();">
+  <div class="container">
+    <h1>Rent a <strong>cosplayer</strong></h1>
+    <p>Let us help you find a cosplayer!</p>
+  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="btn btn-primary">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
 <% end %>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rerum repellendus deleniti laudantium nisi obcaecati iusto autem, alias veniam tenetur dignissimos eius quia. Placeat amet reiciendis quam quae odit laudantium?</p>
+  </div>
+</div>
+
+</div>
