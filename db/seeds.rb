@@ -11,15 +11,24 @@ User.delete_all
 
 puts "Seeding 5 users"
 
-user1 = User.new(email: "one@email.com", password: "123456", first_name: "John", last_name: "First")
-user1.save!
-user2 = User.new(email: "two@email.com", password: "123456", first_name: "John", last_name: "Second")
-user2.save!
-user3 = User.new(email: "three@email.com", password: "123456", first_name: "John", last_name: "Third")
-user3.save!
-user4 = User.new(email: "four@email.com", password: "123456", first_name: "John", last_name: "Fourth")
-user4.save!
-user5 = User.new(email: "five@email.com", password: "123456", first_name: "John", last_name: "Fifth")
-user5.save!
+user = User.new(email: "one@email.com", password: "123456", first_name: "John", last_name: "First")
+user.save!
+user = User.new(email: "two@email.com", password: "123456", first_name: "John", last_name: "Second")
+user.save!
+user = User.new(email: "three@email.com", password: "123456", first_name: "John", last_name: "Third")
+user.save!
+user = User.new(email: "four@email.com", password: "123456", first_name: "John", last_name: "Fourth")
+user.save!
+user = User.new(email: "five@email.com", password: "123456", first_name: "John", last_name: "Fifth")
+user.save!
+
+puts "Done!"
+
+# puts 'Seeding 5 cosplays related to users'
+
+# cosplay = Cosplay.new(price: 9.99, details: 'Superman!', user_id: 3)
+# cosplay.save!
+# cosplay = Cosplay.new(price: 9.99, details: 'coolest cosplay ever', user_id: 6)
+# cosplay.save!
 
 puts "Done!"
