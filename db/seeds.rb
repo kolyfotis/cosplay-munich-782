@@ -26,6 +26,11 @@
 
 puts 'Seeding 5 cosplays related to users'
 
+# You might have to open rails c
+# type User.all
+# and change the following user_id to existing users
+# ids in your local database
+
 cosplay = Cosplay.new(price: 15.99, details: 'Super Mario', user_id: 6)
 cosplay.save!
 cosplay = Cosplay.new(price: 49.99, details: 'Superwoman', user_id: 5)
