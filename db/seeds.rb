@@ -37,6 +37,9 @@ puts "Done!"
 puts 'Seeding 5 cosplays associated to exiting users...'
 
 cosplay = Cosplay.new(price: 15.99, details: 'Super Mario', user: user3)
+downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/jmhwobqikv4qxlgu6bai.jpg").open
+cosplay.photo.attach(io: downloaded_image, filename: "jmhwobqikv4qxlgu6bai.jpg")
+# cosplay.photo.image = 'jmhwobqikv4qxlgu6bai'
 cosplay.save!
 cosplay = Cosplay.new(price: 49.99, details: 'Superman', user: user5)
 cosplay.save!
