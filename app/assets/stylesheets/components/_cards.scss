@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
 }
 
 // Smallest device
@@ -62,7 +66,7 @@
 }
 
 .card-trip > img {
-  height: 100px;
+  height: 140px;
   width: 100%;
   object-fit: cover;
 }
@@ -71,7 +75,6 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
-
 }
 
 .card-trip p {
@@ -82,7 +85,7 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 32px 16px 10px 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
