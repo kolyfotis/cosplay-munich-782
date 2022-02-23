@@ -3,5 +3,6 @@
 <%= simple_form_for(@cosplay) do |f| %>
     <%= f.input :price, as: :string  %>
     <%= f.input :details %>
+    <%= f.input :photo, as: :file %>
     <%= f.button :submit %>
   <% end %>
