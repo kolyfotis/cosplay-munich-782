@@ -6,83 +6,55 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# puts "Deleting all users"
+puts "Deleting all users..."
+User.delete_all
+puts "Done."
 
-# User.delete_all
+puts "Seeding 5 users..."
 
-# puts "Seeding 5 users"
+user1 = User.new(email: "one@email.com", password: "123456", first_name: "John", last_name: "First")
+user1.save!
+user2 = User.new(email: "two@email.com", password: "123456", first_name: "Max", last_name: "Second")
+user2.save!
+user3 = User.new(email: "three@email.com", password: "123456", first_name: "George", last_name: "Third")
+user3.save!
+user4 = User.new(email: "four@email.com", password: "123456", first_name: "Julian", last_name: "Fourth")
+user4.save!
+user5 = User.new(email: "five@email.com", password: "123456", first_name: "Luigi", last_name: "Fifth")
+user5.save!
 
-# user = User.new(email: "one@email.com", password: "123456", first_name: "John", last_name: "First")
-# user.save!
-# user = User.new(email: "two@email.com", password: "123456", first_name: "John", last_name: "Second")
-# user.save!
-# user = User.new(email: "three@email.com", password: "123456", first_name: "John", last_name: "Third")
-# user.save!
-# user = User.new(email: "four@email.com", password: "123456", first_name: "John", last_name: "Fourth")
-# user.save!
-# user = User.new(email: "five@email.com", password: "123456", first_name: "John", last_name: "Fifth")
-# user.save!
+puts "Done!"
 
-# puts "Done!"
+puts "Deleting all cosplays..."
+Cosplay.delete_all
+puts "Done."
 
-puts 'Seeding 5 cosplays related to users'
+# one of the users should have zero Cosplays (user1)
+# one of the users should have exactly one Cosplay (user3)
+# one of the users should have more than one Cosplays (user2, user4, user5)
 
-# You might have to open rails c
-# type User.all
-# and change the following user_id to existing users
-# ids in your local database
+puts 'Seeding 5 cosplays associated to exiting users...'
 
-cosplay = Cosplay.new(price: 15.99, details: 'Super Mario', user_id: 6)
+cosplay = Cosplay.new(price: 15.99, details: 'Super Mario', user: user3)
 cosplay.save!
-cosplay = Cosplay.new(price: 49.99, details: 'Superwoman', user_id: 5)
+cosplay = Cosplay.new(price: 49.99, details: 'Superman', user: user5)
 cosplay.save!
-cosplay = Cosplay.new(price: 99.99, details: 'Spiderman', user_id: 5)
+cosplay = Cosplay.new(price: 99.99, details: 'Spiderman', user: user5)
 cosplay.save!
-cosplay = Cosplay.new(price: 22.99, details: 'Batman', user_id: 4)
+cosplay = Cosplay.new(price: 22.99, details: 'Batman', user: user4)
 cosplay.save!
-# # User.delete_all
+cosplay = Cosplay.new(price: 22.99, details: 'Goofy from Disney', user: user4)
+cosplay.save!
+cosplay = Cosplay.new(price: 130.00, details: 'Gandalf', user: user4)
+cosplay.save!
+cosplay = Cosplay.new(price: 35.50, details: 'Captain Jack Sparrow', user: user4)
+cosplay.save!
+cosplay = Cosplay.new(price: 35.50, details: 'Bugs Bunny', user: user2)
+cosplay.save!
+cosplay = Cosplay.new(price: 25.50, details: 'Harry Potter', user: user2)
+cosplay.save!
+cosplay = Cosplay.new(price: 85.00, details: 'Optimus Prime', user: user2)
+cosplay.save!
 
-# puts "Seeding 5 users"
-
-user = User.new(email: "one@email.com", password: "123456", first_name: "John", last_name: "First")
-user.save!
-user = User.new(email: "two@email.com", password: "123456", first_name: "John", last_name: "Second")
-user.save!
-user = User.new(email: "three@email.com", password: "123456", first_name: "John", last_name: "Third")
-user.save!
-user = User.new(email: "four@email.com", password: "123456", first_name: "John", last_name: "Fourth")
-user.save!
-user = User.new(email: "five@email.com", password: "123456", first_name: "John", last_name: "Fifth")
-user.save!
-user = User.new(email: "spiderman@email.com", password: "123456", first_name: "John", last_name: "Spiderman")
-user.save!
-user = User.new(email: "catwoman@email.com", password: "123456", first_name: "John", last_name: "catwoman")
-user.save!
-user = User.new(email: "hulk@email.com", password: "123456", first_name: "John", last_name: "hulk")
-user.save!
-user = User.new(email: "batman@email.com", password: "123456", first_name: "John", last_name: "batman")
-user.save!
-user = User.new(email: "crocodile_hunter@email.com", password: "123456", first_name: "John", last_name: "crocodile_hunter")
-user.save!
-user = User.new(email: "bronzeman@email.com", password: "123456", first_name: "John", last_name: "bronzeman")
-user.save!
-user = User.new(email: "Iron_fist@email.com", password: "123456", first_name: "John", last_name: "Iron fist")
-user.save!
-user = User.new(email: "superman@email.com", password: "123456", first_name: "John", last_name: "superman")
-user.save!
-user = User.new(email: "bob@email.com", password: "123456", first_name: "John", last_name: "bob")
-user.save!
-user = User.new(email: "She-hulk@email.com", password: "123456", first_name: "John", last_name: "She-hulk")
-user.save!
-user = User.new(email: "Capt.Britain@email.com", password: "123456", first_name: "John", last_name: "Capt.Britain")
-user.save!
-user = User.new(email: "Red-Rocket@email.com", password: "123456", first_name: "John", last_name: "Red-Rocket")
-user.save!
-user = User.new(email: "ChuckNorris@email.com", password: "123456", first_name: "John", last_name: "Chuck Norris")
-user.save!
-user = User.new(email: "2chains@email.com", password: "123456", first_name: "John", last_name: "2chains")
-user.save!
-user = User.new(email: "3chains@email.com", password: "123456", first_name: "John", last_name: "3chains")
-user.save!
-
-# puts "Done!"
+puts 'Done.'
+puts 'Finished seeding the DB.'
