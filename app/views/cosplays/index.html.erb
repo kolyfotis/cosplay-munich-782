@@ -1,10 +1,17 @@
 
 <h1>Cosplays Available</h1>
 <br>
-<ul>
+<div class="cards">
   <% @cosplays&.each do |c| %>
-    <li>Details: <%= link_to c.details, cosplay_path(c) %></li>
-    <li>Price: <%= c.price %></li>
-    <br>
+      <div class="card-trip" >
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2> <%= c.details  %></h2>
+          </div>
+          <h2 class="card-trip-pricing"><%= c.price %> </h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+  </div>
   <% end %>
-</ul>
+</div>
