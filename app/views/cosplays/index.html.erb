@@ -1,0 +1,10 @@
+
+<h1>Cosplays Available</h1>
+<br>
+<ul>
+  <% @cosplays&.each do |c| %>
+    <li>Details: <%= link_to c.details, cosplay_path(c) %></li>
+    <li>Price: <%= c.price %></li>
+    <br>
+  <% end %>
+</ul>

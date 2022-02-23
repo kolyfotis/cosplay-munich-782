@@ -7,6 +7,39 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # puts "Deleting all users"
+
+# User.delete_all
+
+# puts "Seeding 5 users"
+
+# user = User.new(email: "one@email.com", password: "123456", first_name: "John", last_name: "First")
+# user.save!
+# user = User.new(email: "two@email.com", password: "123456", first_name: "John", last_name: "Second")
+# user.save!
+# user = User.new(email: "three@email.com", password: "123456", first_name: "John", last_name: "Third")
+# user.save!
+# user = User.new(email: "four@email.com", password: "123456", first_name: "John", last_name: "Fourth")
+# user.save!
+# user = User.new(email: "five@email.com", password: "123456", first_name: "John", last_name: "Fifth")
+# user.save!
+
+# puts "Done!"
+
+puts 'Seeding 5 cosplays related to users'
+
+# You might have to open rails c
+# type User.all
+# and change the following user_id to existing users
+# ids in your local database
+
+cosplay = Cosplay.new(price: 15.99, details: 'Super Mario', user_id: 6)
+cosplay.save!
+cosplay = Cosplay.new(price: 49.99, details: 'Superwoman', user_id: 5)
+cosplay.save!
+cosplay = Cosplay.new(price: 99.99, details: 'Spiderman', user_id: 5)
+cosplay.save!
+cosplay = Cosplay.new(price: 22.99, details: 'Batman', user_id: 4)
+cosplay.save!
 # # User.delete_all
 
 # puts "Seeding 5 users"
