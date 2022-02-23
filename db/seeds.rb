@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts "Deleting all cosplays..."
+Cosplay.delete_all
+puts "Done."
+
 puts "Deleting all users..."
 User.delete_all
 puts "Done."
@@ -24,10 +28,6 @@ user5 = User.new(email: "five@email.com", password: "123456", first_name: "Luigi
 user5.save!
 
 puts "Done!"
-
-puts "Deleting all cosplays..."
-Cosplay.delete_all
-puts "Done."
 
 # one of the users should have zero Cosplays (user1)
 # one of the users should have exactly one Cosplay (user3)
