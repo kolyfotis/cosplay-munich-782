@@ -32,6 +32,7 @@ puts "Done."
 # one of the users should have zero Cosplays (user1)
 # one of the users should have exactly one Cosplay (user3)
 # one of the users should have more than one Cosplays (user2, user4, user5)
+# there have to be duplicate Cosplays for price comparison
 
 puts 'Seeding 5 cosplays associated to exiting users...'
 
@@ -41,6 +42,8 @@ cosplay = Cosplay.new(price: 49.99, details: 'Superman', user: user5)
 cosplay.save!
 cosplay = Cosplay.new(price: 99.99, details: 'Spiderman', user: user5)
 cosplay.save!
+cosplay = Cosplay.new(price: 45.00, details: 'Batman', user: user5)
+cosplay.save!
 cosplay = Cosplay.new(price: 22.99, details: 'Batman', user: user4)
 cosplay.save!
 cosplay = Cosplay.new(price: 22.99, details: 'Goofy from Disney', user: user4)
@@ -48,6 +51,8 @@ cosplay.save!
 cosplay = Cosplay.new(price: 130.00, details: 'Gandalf', user: user4)
 cosplay.save!
 cosplay = Cosplay.new(price: 35.50, details: 'Captain Jack Sparrow', user: user4)
+cosplay.save!
+cosplay = Cosplay.new(price: 15.50, details: 'Captain Jack Sparrow', user: user2)
 cosplay.save!
 cosplay = Cosplay.new(price: 35.50, details: 'Bugs Bunny', user: user2)
 cosplay.save!
