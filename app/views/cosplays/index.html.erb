@@ -1,22 +1,20 @@
 
 <h1>Cosplays Available</h1>
 <br>
-<div class="cards">
+<div class="index-cards">
   <% @cosplays&.each do |c| %>
-    <%= link_to cosplay_path(c) do %>
-      <div class="card-trip" >
-        <% if c.photo.key %>
-          <%= cl_image_tag c.photo&.key %>
-        <% else %>
-          <%= cl_image_tag '' %>
-        <% end %>
-          <div class="card-trip-infos">
-            <div>
-              <h2> <%= c.title  %></h2>
-            </div>
-            <h2 class="card-trip-pricing">€ <%= c.price %> </h2>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-          </div>
+    <%= link_to cosplay_path(c), class: 'card-trip' do %>
+      <% if c.photo.key %>
+        <%= cl_image_tag(c.photo.key) %>
+      <% else %>
+        <%= cl_image_tag '' %>
+      <% end %>
+      <div class="card-trip-infos">
+        <div>
+          <h2> <%= c.title  %></h2>
+        </div>
+        <h2 class="card-trip-pricing">€ <%= c.price %> </h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
     <% end %>
   <% end %>
