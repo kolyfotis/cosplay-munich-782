@@ -38,9 +38,9 @@ puts "Done!"
 # Cloudinary::Uploader.upload("/home/fotis/Pictures/super-mario-01.jpg", folder: 'development')
 
 puts 'Seeding 5 cosplays associated to exiting users...'
-
+p ENV["CLOUDINARY_URL"]
 cosplay = Cosplay.new(price: 15.99, details: 'Super Mario', user: user3)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/jmhwobqikv4qxlgu6bai.jpg").open
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/jmhwobqikv4qxlgu6bai.jpg")
 cosplay.photo.attach(io: downloaded_image, filename: "jmhwobqikv4qxlgu6bai.jpg")
 cosplay.save!
 cosplay = Cosplay.new(price: 49.99, details: 'Superman', user: user5)
