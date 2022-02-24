@@ -51,7 +51,7 @@ cosplay = Cosplay.new(price: 45.00, details: 'Batman', user: user5)
 cosplay.save!
 cosplay = Cosplay.new(price: 22.99, details: 'Batman', user: user4)
 cosplay.save!
-cosplay = Cosplay.new(price: 22.99, details: 'Goofy from Disney', user: user4)
+cosplay = Cosplay.new(price: 22.99, details: 'Goofy ', user: user4)
 cosplay.save!
 cosplay = Cosplay.new(price: 130.00, details: 'Gandalf', user: user4)
 cosplay.save!
