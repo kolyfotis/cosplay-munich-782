@@ -1,5 +1,6 @@
 class Cosplay < ApplicationRecord
   belongs_to :user
+  has_one_attached :photo
 
   # price to be positive
   validates :price, presence: true, numericality: { greater_than_or_equal_to: 0 }

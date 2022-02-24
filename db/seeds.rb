@@ -34,9 +34,14 @@ puts "Done!"
 # one of the users should have more than one Cosplays (user2, user4, user5)
 # there have to be duplicate Cosplays for price comparison
 
+# Upload to cloudinary from local Pictures folder example
+# Cloudinary::Uploader.upload("/home/fotis/Pictures/super-mario-01.jpg", folder: 'development')
+
 puts 'Seeding 5 cosplays associated to exiting users...'
 
 cosplay = Cosplay.new(price: 15.99, details: 'Super Mario', user: user3)
+downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/jmhwobqikv4qxlgu6bai.jpg").open
+cosplay.photo.attach(io: downloaded_image, filename: "jmhwobqikv4qxlgu6bai.jpg")
 cosplay.save!
 cosplay = Cosplay.new(price: 49.99, details: 'Superman', user: user5)
 cosplay.save!
@@ -46,7 +51,7 @@ cosplay = Cosplay.new(price: 45.00, details: 'Batman', user: user5)
 cosplay.save!
 cosplay = Cosplay.new(price: 22.99, details: 'Batman', user: user4)
 cosplay.save!
-cosplay = Cosplay.new(price: 22.99, details: 'Goofy from Disney', user: user4)
+cosplay = Cosplay.new(price: 22.99, details: 'Goofy ', user: user4)
 cosplay.save!
 cosplay = Cosplay.new(price: 130.00, details: 'Gandalf', user: user4)
 cosplay.save!

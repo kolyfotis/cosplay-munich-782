@@ -60,6 +60,8 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'cloudinary'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'devise'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
