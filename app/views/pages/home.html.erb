@@ -1,7 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0)), url(<%=asset_path 'cosplay-banner-cropped.jpg'  %>)">
   <div class="container">
     <h1 id="home-title">Rent a <strong>cosplayer</strong></h1>
-    <p>Let us help you find a cosplayer!</p>
+    <p>Meet your favourite characters!</p>
     <%= simple_form_for :search, url: root_path, method: :get do |f| %>
     <div class="search-form-control form-group">
       <input class="form-control string required" type="text" placeholder="Batman, Jack Sparrow..." name="search[query]" id="search_query" />
@@ -12,8 +12,8 @@
     <% end %>
   </div>
 </div>
-<div class="container border-bottom">
-<p class="text-center" id="definition">Hire a <strong>costume player</strong> for parties, promotions or any other event!<br>Our recommendations:</p>
+<div class="container">
+<p class="text-center" id="definition">Hire a <strong>costume player</strong> for parties, promotions or any other event! Our recommendations:</p>
 </div>
 <div class="cards ">
 <a href="/cosplays" text-decoration: none>
