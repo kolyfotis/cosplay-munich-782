@@ -104,7 +104,6 @@ cosplay.save!
 cosplay = Cosplay.new(price: 22.99, details: 'Batman', user: user4)
 downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/jgp0jfi8a9mnierdm3a6.jpg")
 cosplay.photo.attach(io: downloaded_image, filename: "jgp0jfi8a9mnierdm3a6.png", content_type: 'image/png')
-
 cosplay.save!
 
 puts 'Done.'
