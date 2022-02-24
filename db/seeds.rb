@@ -55,54 +55,55 @@ puts "Done!"
 # puts 'Done! All images are on cloudinary server under /development folder.'
 
 puts 'Seeding 5 cosplays associated to exiting users...'
+puts 'Fetching cosplays images...'
 
 cosplay = Cosplay.new(price: 15.99, details: 'Super Mario', user: user3)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/egggbjxowfuhthswphse.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "egggbjxowfuhthswphse.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/egggbjxowfuhthswphse.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "egggbjxowfuhthswphse.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 49.99, details: 'Superman', user: user5)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/qavroaua4oezqivg1kja.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "qavroaua4oezqivg1kja.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/qavroaua4oezqivg1kja.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "qavroaua4oezqivg1kja.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 99.99, details: 'Spiderman', user: user5)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/cuczsk6zvr8eekcpbzo7.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "cuczsk6zvr8eekcpbzo7.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/cuczsk6zvr8eekcpbzo7.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "cuczsk6zvr8eekcpbzo7.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 85.00, details: 'Optimus Prime', user: user2)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/l7dpyglejrfa6wvxkxit.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "l7dpyglejrfa6wvxkxit.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/l7dpyglejrfa6wvxkxit.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "l7dpyglejrfa6wvxkxit.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 35.50, details: 'Captain Jack Sparrow', user: user4)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/njobtke1on9ubtulu7sj.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "njobtke1on9ubtulu7sj.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/njobtke1on9ubtulu7sj.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "njobtke1on9ubtulu7sj.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 15.50, details: 'Captain Jack Sparrow', user: user2)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/pa0mnlvigly681hi85ql.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "pa0mnlvigly681hi85ql.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/pa0mnlvigly681hi85ql.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "pa0mnlvigly681hi85ql.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 25.50, details: 'Harry Potter', user: user2)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/wgpm8efyw7cujvic0jkg.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "wgpm8efyw7cujvic0jkg.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/wgpm8efyw7cujvic0jkg.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "wgpm8efyw7cujvic0jkg.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 22.99, details: 'Goofy ', user: user4)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/wjd0eultrsukhqjegzkp.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "wjd0eultrsukhqjegzkp.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/wjd0eultrsukhqjegzkp.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "wjd0eultrsukhqjegzkp.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 130.00, details: 'Gandalf', user: user4)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/qdymooscin3bkutibqo6.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "qdymooscin3bkutibqo6.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/qdymooscin3bkutibqo6.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "qdymooscin3bkutibqo6.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 35.50, details: 'Bugs Bunny', user: user2)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/wvrq9f3ur5ilnphwoxa4.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "wvrq9f3ur5ilnphwoxa4.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/wvrq9f3ur5ilnphwoxa4.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "wvrq9f3ur5ilnphwoxa4.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 45.00, details: 'Batman', user: user5)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/bhrcisuwyhxpdgli0tye.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "bhrcisuwyhxpdgli0tye.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/bhrcisuwyhxpdgli0tye.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "bhrcisuwyhxpdgli0tye.png", content_type: 'image/png')
 cosplay.save!
 cosplay = Cosplay.new(price: 22.99, details: 'Batman', user: user4)
-downloaded_image = URI.parse("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/jgp0jfi8a9mnierdm3a6.jpg").open
-cosplay.photo.attach(io: downloaded_image, filename: "jgp0jfi8a9mnierdm3a6.jpg")
+downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/jgp0jfi8a9mnierdm3a6.jpg")
+cosplay.photo.attach(io: downloaded_image, filename: "jgp0jfi8a9mnierdm3a6.png", content_type: 'image/png')
 cosplay.save!
 
 puts 'Done.'
