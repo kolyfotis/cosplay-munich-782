@@ -1,8 +1,9 @@
 <h1>Edit your coslplay listing</h1>
 
 <%= simple_form_for(@cosplay) do |f| %>
-    <%= f.input :price, as: :string %>
-    <%= f.input :details %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit %>
-  <% end %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :price, as: :string %>
+  <%= f.button :submit, class: 'btn-flat' %>
+<% end %>
