@@ -1,8 +1,9 @@
 <h1>Create your coslplay listing</h1>
 
 <%= simple_form_for(@cosplay) do |f| %>
-    <%= f.input :price, as: :string  %>
-    <%= f.input :details %>
+    <%= f.input :title, placeholder: 'What is your costume?' %>
+    <%= f.input :details, placeholder: 'Short description of your coslplay...' %>
     <%= f.input :photo, as: :file %>
-    <%= f.button :submit %>
+    <%= f.input :price, as: :string, placeholder: 'e.g. 59.99' %>
+    <%= f.button :submit, class: 'btn-flat' %>
   <% end %>
