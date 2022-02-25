@@ -1,7 +1,7 @@
-<h1>Dashboard</h1>
-<h2>Your booked cosplays</h2>
+<h1>Your booked cosplays</h1>
 <% current_user.bookings.each do |booking| %>
-  <div class="row d-flex dashboard-card">
+<div class="d-flex justify-content-center">
+  <div class="row d-flex dashboard-card col-6">
     <div class="container col-6"><p>
       <h1><%= booking.cosplay.title %></h1>
         <p>Owner: <%= booking.cosplay.user.first_name %> <%= booking.cosplay.user.last_name %></p>
@@ -11,7 +11,8 @@
       </div>
         <div class="container col-6">
           <%= cl_image_tag(booking.cosplay.photo.key,
-                width: 200, crop: :fill) %>
+                width: 250, crop: :fill) %>
         </div>
   </div>
+</div>
 <% end %>
