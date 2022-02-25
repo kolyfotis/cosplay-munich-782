@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :cosplays do
     resources :bookings, only: [ :show, :new, :create ]
   end
+  get "dashboard", to: "pages#dashboard"
 end
