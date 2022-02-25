@@ -1,0 +1,13 @@
+<h1>Dashboard</h1>
+<h2>Your booked cosplays</h2>
+<% current_user.bookings.each do |booking| %>
+  <p>
+    <h1><%= booking.cosplay.title %></h1>
+    <p>Owner: <%= booking.cosplay.user.first_name %> <%= booking.cosplay.user.last_name %></p>
+    <p>Price: <%= booking.cosplay.price %>€</p>
+    <p>Details: <%= booking.cosplay.details %></p>
+    <%= cl_image_tag(booking.cosplay.photo.key,
+          width: 200, crop: :fill) %>
+    <p>Date: <%= booking.date %> </p>
+  </p>
+<% end %>
