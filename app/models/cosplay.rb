@@ -1,7 +1,7 @@
 class Cosplay < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
-
+  has_many :bookings, dependent: :destroy
   # price to be positive
   validates :price, presence: true,
                     format: { with: /\A\d+(\.\d{1,2})?\z/, message: "Invalid price format." }
