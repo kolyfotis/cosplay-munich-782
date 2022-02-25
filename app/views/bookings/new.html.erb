@@ -2,15 +2,13 @@
   <i class="fas fa-solid fa-angle-left my-3"> Back</i>
 <% end %>
 
-<div class="containertoo">
+<div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-6">
-      <div id="bob">
         <%= simple_form_for([@cosplay, @booking]) do  |f| %>
           <%= f.input :date %>
           <%= f.button :submit %>
         <% end %>
-      </div>
     </div>
   </div>
 </div>
