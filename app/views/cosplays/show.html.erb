@@ -1,5 +1,5 @@
 <%= link_to cosplays_path do %>
-  <i class="fas fa-solid fa-angle-left my-3"> Back</i>
+  <i class="fas fa-solid fa-angle-left my-3 btn btn-primary"> Back</i>
 <% end %>
 <div class="container">
   <div class="row">
@@ -9,10 +9,11 @@
       <% end %>
     </div>
     <div class="col-sm-6">
-      <h1><%= @cosplay.title %></h1>
-        <p>Owner: <%= @cosplay.user.first_name %> <%= @cosplay.user.last_name %></p>
-        <p>Price: <%= @cosplay.price %>€</p>
-        <p>Details: <%= @cosplay.details %></p>
+
+      <h1><%= @cosplay.title %></h1><br>
+        <h4><%= @cosplay.user.first_name %> <%= @cosplay.user.last_name %></h4>
+        <p><i class="fas fa-solid fa-info"></i> <%= @cosplay.details %></p>
+        <p><i class="fas fa-solid fa-euro-sign"> </i> <%= @cosplay.price %></p><br><br>
         <% unless current_user == @cosplay.user %>
           <%= link_to "Book now", new_cosplay_booking_path(@cosplay), class: "btn btn-flat" %>
         <% end %>
