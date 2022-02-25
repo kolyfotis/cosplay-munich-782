@@ -1,20 +1,29 @@
 <%= link_to cosplays_path do %>
   <i class="fas fa-solid fa-angle-left my-3 btn btn-primary"> Back</i>
 <% end %>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-6" id="cosplay_image">
       <% if @cosplay.photo.key %>
-        <%= cl_image_tag(@cosplay.photo.key,
-          width: 600, crop: :fill) %>
+        <%= cl_image_tag(@cosplay.photo.key) %>
       <% end %>
     </div>
     <div class="col-sm-6">
+<<<<<<< HEAD
       <h1><%= @cosplay.title %></h1><br>
         <h4><%= @cosplay.user.first_name %> <%= @cosplay.user.last_name %></h4>
         <p><i class="fas fa-solid fa-info"></i> <%= @cosplay.details %></p>
         <p><i class="fas fa-solid fa-euro-sign"> </i> <%= @cosplay.price %></p><br><br>
         <%= link_to "Book now", new_cosplay_booking_path(@cosplay), class: "btn btn-flat" %>
+=======
+      <h1><%= @cosplay.title %></h1>
+        <p>Owner: <%= @cosplay.user.first_name %> <%= @cosplay.user.last_name %></p>
+        <p>Price: <%= @cosplay.price %>€</p>
+        <p>Details: <%= @cosplay.details %></p>
+        <% unless current_user == @cosplay.user %>
+          <%= link_to "Book now", new_cosplay_booking_path(@cosplay), class: "btn btn-flat" %>
+        <% end %>
+>>>>>>> master
         <br>
         <% if current_user == @cosplay.user %>
           <span><%= link_to 'Edit', edit_cosplay_path(@cosplay) %></span> |

@@ -1,5 +1,10 @@
 
-<h1>Cosplays Available</h1>
+<div id="cosplay-index-top">
+  <h1>Cosplays Available</h1>
+  <%= link_to new_cosplay_path do %>
+    <i class="fas fa-solid fa-plus my-1 py-2 px-2 btn-flat"> Become a cosplayer</i>
+  <% end %>
+</div>
 <br>
 <div class="index-cards">
   <% @cosplays&.each do |c| %>
@@ -14,7 +19,11 @@
           <h2> <%= c.title  %></h2>
         </div>
         <h2 class="card-trip-pricing">€ <%= c.price %> </h2>
+        <% if c.user.photo.key %>
           <%= cl_image_tag(c.user.photo.key, :class => "card-trip-user avatar-bordered") %>
+        <% else %>
+          <%= cl_image_tag '' %>
+        <% end %>
       </div>
     <% end %>
   <% end %>
