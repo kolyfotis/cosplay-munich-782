@@ -39,7 +39,7 @@ class CosplaysController < ApplicationController
   private
 
   def cosplay_params
-    params.require(:cosplay).permit(:user_id, :price, :details, :photo)
+    params.require(:cosplay).permit(:user_id, :price, :details, :photo, :title)
   end
 
   def set_cosplay
