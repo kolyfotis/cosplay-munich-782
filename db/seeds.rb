@@ -93,11 +93,11 @@ cosplay = Cosplay.new(price: 85.00, details: 'Autobots, roll out', user: user2, 
 downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/l7dpyglejrfa6wvxkxit.jpg")
 cosplay.photo.attach(io: downloaded_image, filename: "l7dpyglejrfa6wvxkxit.png", content_type: 'image/png')
 cosplay.save!
-cosplay = Cosplay.new(price: 35.50, details: 'We can work on the price if you are serving rum', user: user4, title: 'Captain Jack Sparrow')
+cosplay = Cosplay.new(price: 35.50, details: 'We can work on the price if you are serving rum', user: user4, title: 'Jack Sparrow')
 downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/njobtke1on9ubtulu7sj.jpg")
 cosplay.photo.attach(io: downloaded_image, filename: "njobtke1on9ubtulu7sj.png", content_type: 'image/png')
 cosplay.save!
-cosplay = Cosplay.new(price: 15.50, details: 'Captain Jack Sparrow', user: user2, title: 'Captain Jack Sparrow')
+cosplay = Cosplay.new(price: 15.50, details: 'Captain Jack Sparrow', user: user2, title: 'Jack Sparrow')
 downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/pa0mnlvigly681hi85ql.jpg")
 cosplay.photo.attach(io: downloaded_image, filename: "pa0mnlvigly681hi85ql.png", content_type: 'image/png')
 cosplay.save!
