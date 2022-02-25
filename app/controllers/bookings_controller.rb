@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     if @booking.save
       flash[:success] = "Your booking was created."
-      redirect_to root_path
+      redirect_to dashboard_path
     else
       render :new
       flash[:warning] = "Your booking was not created"
