@@ -1,0 +1,33 @@
+#bob {
+  // display: flex;
+  // justify-content: center;
+    // border: solid 1px;
+    // margin-top: 50px;
+
+}
+.simple_form {
+  float: none;
+  text-align : center;
+  margin-right: auto;
+  margin-left: auto;
+  position: auto;
+  margin-top: 50px;
+  border: solid 1px;
+  box-shadow: 10px 5px 5px rgba(158, 152, 152, 1);
+}
+
+
+input.btn {
+  background-color: rgb(16, 214, 16);
+  border-radius: 5px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  display: inline-block;
+  width: 233px;
+  margin-bottom: 2%;
+}
+
+.btn:hover {
+  transition: all 1s ease-out;
+}

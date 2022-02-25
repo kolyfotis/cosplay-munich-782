@@ -1,10 +1,12 @@
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-      <%= simple_form_for([@cosplay, @booking]) do  |f| %>
-        <%= f.input :date %>
-        <%= f.button :submit %>
-      <% end %>
+<div class="containertoo">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div id="bob">
+        <%= simple_form_for([@cosplay, @booking]) do  |f| %>
+          <%= f.input :date %>
+          <%= f.button :submit %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

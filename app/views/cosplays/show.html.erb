@@ -1,27 +1,25 @@
 <%= link_to cosplays_path do %>
   <i class="fas fa-solid fa-angle-left my-3"> Back</i>
 <% end %>
-<div class="d-flex justify-content-between text-end">
-  <div>
-    <% if @cosplay.photo.key %>
-      <%= cl_image_tag(@cosplay.photo.key,
-         width: 600, crop: :fill) %>
-    <% end %>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <h1><%= @cosplay.title %></h1>
-
-    <!-- how to get user first and last name -->
-    <p>Owner: <%= @cosplay.user.first_name %> <%= @cosplay.user.last_name %></p>
-    <p>Price: <%= @cosplay.price %>€</p>
-    <p>Details: <%= @cosplay.details %></p>
-    <%= link_to "Book now", new_cosplay_booking_path(@cosplay), class: "btn btn-flat" %>
-    <br>
-    <% if current_user == @cosplay.user %>
-      <span><%= link_to 'Edit', edit_cosplay_path(@cosplay) %></span> |
-      <span><%= link_to 'Delete listing', @cosplay, method: :delete, data: { confirm: 'Are you sure you want to delete this listing?'} %></span>
-    <% end %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <% if @cosplay.photo.key %>
+        <%= cl_image_tag(@cosplay.photo.key,
+          width: 600, crop: :fill) %>
+      <% end %>
+    </div>
+    <div class="col-sm-6">
+      <h1><%= @cosplay.title %></h1>
+        <p>Owner: <%= @cosplay.user.first_name %> <%= @cosplay.user.last_name %></p>
+        <p>Price: <%= @cosplay.price %>€</p>
+        <p>Details: <%= @cosplay.details %></p>
+        <%= link_to "Book now", new_cosplay_booking_path(@cosplay), class: "btn btn-flat" %>
+        <br>
+        <% if current_user == @cosplay.user %>
+          <span><%= link_to 'Edit', edit_cosplay_path(@cosplay) %></span> |
+          <span><%= link_to 'Delete listing', @cosplay, method: :delete, data: { confirm: 'Are you sure you want to delete this listing?'} %></span>
+        <% end %>
+    </div>
   </div>
 </div>
