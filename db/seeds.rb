@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Deleting all bookings"
+Booking.delete_all
+puts "Done."
 
 puts "Deleting all cosplays..."
 Cosplay.delete_all
@@ -17,17 +20,34 @@ puts "Done."
 puts "Seeding 5 users..."
 
 user1 = User.new(email: "one@email.com", password: "123456", first_name: "John", last_name: "First")
+downloaded_image = URI.open("https://res.cloudinary.com/dp3tpzhjx/image/upload/v1645785893/cosplay_avatars/avatar-e7fe1c70efea17145d1a1e6141896b62_ndtsbv.jpg")
+user1.photo.attach(io: downloaded_image, filename: 'nes1.png', content_type: 'image/png')
 user1.save!
+
 user2 = User.new(email: "two@email.com", password: "123456", first_name: "Max", last_name: "Second")
+downloaded_image = URI.open("https://res.cloudinary.com/dp3tpzhjx/image/upload/v1645785893/cosplay_avatars/avatar-fafd73aee8149c342ce82dcdd859f582_wj21tr.jpg")
+user2.photo.attach(io: downloaded_image, filename: 'nes2.png', content_type: 'image/png')
 user2.save!
+
 user3 = User.new(email: "three@email.com", password: "123456", first_name: "George", last_name: "Third")
+downloaded_image = URI.open("https://res.cloudinary.com/dp3tpzhjx/image/upload/v1645785893/cosplay_avatars/avatar-7f78fa4d936a1ce65de87e01467542b3_tshwnt.jpg")
+user3.photo.attach(io: downloaded_image, filename: 'nes3.png', content_type: 'image/png')
 user3.save!
+
 user4 = User.new(email: "four@email.com", password: "123456", first_name: "Julian", last_name: "Fourth")
+downloaded_image = URI.open("https://res.cloudinary.com/dp3tpzhjx/image/upload/v1645785893/cosplay_avatars/avatar-8a73e3aec0c61a5db49ac9b2f479a4fe_ndzt7o.jpg")
+user4.photo.attach(io: downloaded_image, filename: 'nes4.png', content_type: 'image/png')
 user4.save!
+
 user5 = User.new(email: "five@email.com", password: "123456", first_name: "Luigi", last_name: "Fifth")
+downloaded_image = URI.open("https://res.cloudinary.com/dp3tpzhjx/image/upload/v1645785893/cosplay_avatars/avatar-51059d4b3d8667fabc160d35c3e3a569_wpwawx.jpg")
+user5.photo.attach(io: downloaded_image, filename: 'nes5.png', content_type: 'image/png')
 user5.save!
 
 puts "Done!"
+
+# downloaded_image = URI.open("https://res.cloudinary.com/dqwzxjmpk/image/upload/v1645650968/development/egggbjxowfuhthswphse.jpg")
+# cosplay.photo.attach(io: downloaded_image, filename: "egggbjxowfuhthswphse.png", content_type: 'image/png')
 
 # one of the users should have zero Cosplays (user1)
 # one of the users should have exactly one Cosplay (user3)

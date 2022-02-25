@@ -14,7 +14,7 @@
           <h2> <%= c.title  %></h2>
         </div>
         <h2 class="card-trip-pricing">€ <%= c.price %> </h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          <%= cl_image_tag(c.user.photo.key, :class => "card-trip-user avatar-bordered") %>
       </div>
     <% end %>
   <% end %>
